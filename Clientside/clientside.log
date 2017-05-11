@@ -1,22 +1,8 @@
 INFO:root:ALL CONVOS LOADED
 INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 1 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 2 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 3 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 4 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 5 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 6 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 7 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 8 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 9 started
-INFO:root:Beginning Registration
-DEBUG:root:Thread for clientID 10 started
-INFO:root:ALL THREADS STARTED
+INFO:root:Client 1 Registered
+CRITICAL:root:Client 1 Cannot connect. Retrying in 10...
+CRITICAL:root:Client 1 Cannot connect. Retrying in 10...
+CRITICAL:root:Client 1 Cannot connect. Retrying in 10...
+CRITICAL:root:Client 1 Cannot connect. Retrying in 10...
+CRITICAL:root:Client 1 Cannot connect. Retrying in 10...

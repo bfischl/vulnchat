@@ -86,7 +86,7 @@ def do_work(q, client, globalvars):
     """
     timeout = 10
     attempts = 0
-    max_attempts = 100
+    max_attempts = 5
     logging.info("Beginning Registration")
     while client.get_reg_status() < 1:
         if attempts > max_attempts:
@@ -163,15 +163,15 @@ def main(argv):
     # start thread per user
     q = Queue.Queue()
     thread_list = list()
-    for key, client in clientlist.iteritems():
-        t = threading.Thread(target=do_work, args=(q, client, globalvars))
-        t.daemon = True
-        t.start()
-        thread_list.append(t)
-        logging.debug("Thread for clientID %d started", int(key))
-    logging.info("ALL THREADS STARTED")
-    for t in thread_list:
-        t.join()
-
+    #for key, client in clientlist.iteritems():
+    #    t = threading.Thread(target=do_work, args=(q, client, globalvars))
+    #    t.daemon = True
+    #    t.start()
+    #    thread_list.append(t)
+    #    logging.debug("Thread for clientID %d started", int(key))
+    #logging.info("ALL THREADS STARTED")
+    #for t in thread_list:
+    #    t.join()
+    do_work(q,clientlist[1],globalvars)
 if __name__ == "__main__":
     main(sys.argv[1:])

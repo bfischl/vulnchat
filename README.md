@@ -1,1 +1,52 @@
 # vulnchat
+__UNCLASSIFIED--EXERCISE__
+
+v0.0.1
+
+Written by: bfischl
+
+GPLv3 applies
+
+Vulnchat leverages xmpppy to simulate multiple clients for the use of traffic generation
+to a vulnerable server. It is intended for use with a vulnerable XMPP server which students
+can attack. The purpose of generating robust traffic is to increase the content to sift through
+after a successful attack. This framework provides the ability to modify settings in a way that
+allows for different vulnerabilities to allow variety and increase difficulty for students and
+decrease ability to pass answers along.
+
+
+This software is provided as is, with no warranty and no expectation of support.
+
+
+USAGE
+-----
+~~~python
+    ./clients.py
+	-h,	prints help and exit
+	[-u,--ufile]	csv file containing users
+	[-c,--cfile]    csv file containing conversations
+	[-p,--port]     xmpp server port
+	[-s,--server]   xmpp server address or hostname
+~~~
+
+Any command line argument will be used in place of the default values in settings.txt
+
+UNDERSTANDING CONFIGS
+---------------------
+
+
+settings.txt contains the default settings
+
+user.csv must contain:
+* userid (unique)
+* jid
+* displayname
+* password
+* useragent
+
+conversation.csv must contain:
+* messageid (unique)
+* senderid  (must match a userid, above)
+* destid    (must match a userid, above)
+* time      (in seconds after *HHOUR*, a datetime object in settings)
+* message   (string value of message to be sent)

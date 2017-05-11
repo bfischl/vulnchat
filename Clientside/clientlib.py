@@ -48,17 +48,18 @@ class Client:
         self.message_queue.put((int(tmp_message.time), tmp_message))
 
     def register(self, server, port):
+        print "REGISTERING"
         # Https://stackoverflow.com/questions/5131982/\
         # is-there-any-python-xmpp-library-that-supports-adding-removing-users
         jid = xmpp.protocol.JID(self.jid)
-        self.xmppclient = xmpp.Client(server=(server, port), debug=[])
-        self.xmppclient.connect()
-        xmpp.features.getRegInfo(self.xmppclient,
-                                 server,
-                                 sync=True)
-        if xmpp.features.register(self.xmppclient,("127.0.0.1",9090), {'username':jid,'password':self.password}):
-            print self.xmppclient.l
-            self.registration_status = 1
+        self.xmppclient = xmpp.Client(server=server)
+        self.xmppclient.connect((server,int(port)))
+        print "HERE"
+        self.registration_status = 1
+        #xmpp.features.getRegInfo(self.xmppclient, server, sync=True)
+        #print "Registering"
+        #if xmpp.features.register(self.xmppclient,("127.0.0.1",9090), {'username':self.jid,'password':self.password}):
+        #    self.registration_status = 1
 
 
     def connect(self, server, port):
@@ -68,7 +69,7 @@ class Client:
         :return: 0 on success, -1 on fail
         """
         self.xmppclient = xmpp.Client(server, debug=[])
-        if not self.xmppclient.connect(server=(server, port), use_srv=False):
+        if not self.xmppclient.connect(server=(server, int(port))):
             return -1
         else:
             self.connection_status = 1
