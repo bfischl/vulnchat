@@ -62,7 +62,7 @@ def to_datetime(time_string):
 
 def load_csv(infile, outdict, key):
     """
-    Loads the user csv into memory, returns dict userid -> userinfo_dict
+    Loads the user csv into memory, returns dict with the input key as the key
     :param infile: csv file to read, should be local
     :param outdict: dictionary to be filled with info loaded
     :param key: Used to index returned dict
@@ -85,17 +85,30 @@ def do_work(q, client, globalvars):
     :return: return 0 on completion
     """
     timeout = 10
-    failures = 0
-    max_failures = 100
-
-    while client.get_conn_status() < 1:
-        if failures > max_failures:
+    attempts = 0
+    max_attempts = 100
+    logging.info("Beginning Registration")
+    while client.get_reg_status() < 1:
+        if attempts > max_attempts:
             sys.exit(-1)
-        failures += 1
+        attempts +=1
+        client.register(globalvars['SERVER'],globalvars['PORT'])
+    logging.info("Client %d Registered", client.get_id())
+
+
+    # Loops until able to connect to server, quits after max_failures
+    while client.get_conn_status() < 1:
+        if attempts > max_attempts:
+            sys.exit(-1)
+        attempts += 1
         client.connect(globalvars['SERVER'], globalvars['PORT'])
-        logging.critical("Client %d Cannot connect. Retrying in %d...", client.get_id, timeout)
+        logging.critical("Client %d Cannot connect. Retrying in %d...", client.get_id(), timeout)
         time.sleep(timeout)
+    # Checks for next message in queue, sorted by time to be sent
     next_message = client.poll_message()
+    # These lines perform the timing logic
+    # 1. Compares HHOUR + Message.time - now
+    # 2. If that is positive, we have time left and we will sleep...If negative, we're late and we'll send now
     while next_message is not None:
         tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
         seconds_left = tmp_time_delta.total_seconds()
@@ -132,19 +145,20 @@ def main(argv):
 
     # load user file .csv, format found in README
     clients = {}
-    clients = load_csv(globalvars['UFILE'], clients, 'userId')
+    clients = load_csv(globalvars['UFILE'], clients, 'userid')
 
     # instantiate and load clients objects and add to a dict
     clientlist = dict()
     for key, value in clients.iteritems():
-        clientlist[int(value['userId'])] = Client(value['userId'], value['lastName'], value['firstName'],
-                                                  value['userAgent'])
+        clientlist[int(value['userid'])] = Client(value['userid'], value['jid'], value['displayname'],
+                                                  value['password'], value['useragent'])
     # load conversation file .csv, format found in README
     convos = {}
-    convos = load_csv(globalvars['CFILE'], convos, 'senderId')
+    convos = load_csv(globalvars['CFILE'], convos, 'messageid')
     # add conversations to individual user data structure
     for key, value in convos.iteritems():
-        clientlist[int(key)].add_message(Message(value['time'], value['destId'], value['message']))
+        clientlist[int(value['senderid'])].add_message(Message(value['messageid'], value['time'], value['destid'],
+                                                               value['message']))
     logging.info("ALL CONVOS LOADED")
     # start thread per user
     q = Queue.Queue()
@@ -157,7 +171,6 @@ def main(argv):
         logging.debug("Thread for clientID %d started", int(key))
     logging.info("ALL THREADS STARTED")
     for t in thread_list:
-        logging.debug("THREAD completed")
         t.join()
 
 if __name__ == "__main__":

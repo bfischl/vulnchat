@@ -1,5 +1,5 @@
 SERVER=127.0.0.1
-PORT=80
+PORT=9090
 #HHOUR='2017-04-26 14:33:12.0'
 CFILE=conversations.csv
-UFILE=insurgents.csv
+UFILE=users.csv

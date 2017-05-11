@@ -3,28 +3,35 @@ import queue
 
 
 class Message:
-    def __init__(self, time, dst, text):
+    def __init__(self, messageid, time, dst, text):
+        self.messageid = messageid
         self.time = time
         self.dst = dst
         self.text = text
 
 
 class Client:
-    def __init__(self, userId, lName, fName, userAgent):
+    def __init__(self, userid, jid, displayname, password, useragent):
         """
-        Initializes Client class using
-        :param userId: Unique UserID 
-        :param lName: Last Name
-        :param fName: First Name
-        :param userAgent: userAgent String to Use
+        Initially, 
+        :param userid: 
+        :param jid: 
+        :param displayname: 
+        :param password: 
+        :param useragent: 
         """
-        self.userId = userId
-        self.lName = lName
-        self.fName = fName
-        self.userAgent = userAgent
+        self.userId = userid
+        self.jid = jid
+        self.displayname = displayname
+        self.password = password
+        self.useragent = useragent
         self.message_queue = queue.PriorityQueue()
+        self.registration_status = 0
         self.connection_status = 0
         self.xmppclient = None
+
+    def get_reg_status(self):
+        return self.registration_status
 
     def get_conn_status(self):
         return self.connection_status
@@ -39,6 +46,20 @@ class Client:
         :return: 1 on success, 0 on fail
         """
         self.message_queue.put((int(tmp_message.time), tmp_message))
+
+    def register(self, server, port):
+        # Https://stackoverflow.com/questions/5131982/\
+        # is-there-any-python-xmpp-library-that-supports-adding-removing-users
+        jid = xmpp.protocol.JID(self.jid)
+        self.xmppclient = xmpp.Client(server=(server, port), debug=[])
+        self.xmppclient.connect()
+        xmpp.features.getRegInfo(self.xmppclient,
+                                 server,
+                                 sync=True)
+        if xmpp.features.register(self.xmppclient,("127.0.0.1",9090), {'username':jid,'password':self.password}):
+            print self.xmppclient.l
+            self.registration_status = 1
+
 
     def connect(self, server, port):
         """
