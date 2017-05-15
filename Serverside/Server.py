@@ -1,3 +1,6 @@
+"""
+Likely will not be fully implemented. Many server options exist.
+"""
 import xmpp
 import sys
 import logging
