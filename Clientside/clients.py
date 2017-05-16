@@ -94,6 +94,7 @@ def do_work(q, client, globalvars):
     client.register_plugin('xep_0066')
     client.register_plugin('xep_0004')
     client.register_plugin('xep_0030')
+    client['xep_0077'].force_registration = True
     while client.get_reg_status() < 1:
         if attempts > max_attempts:
             sys.exit(1)

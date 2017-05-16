@@ -64,26 +64,26 @@ DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0030: Service Discovery
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0066: Out of Band Data
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0004: Data Forms
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0077: In-Band Registration
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.13429410329 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.86103923 seconds before connecting.
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying localhost for AAAA records.
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for localhost
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying localhost for A records.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to [::1]:5222
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="16be8457-dc75-41f3-9436-311bf9980e44-1"><query xmlns="jabber:iq:register"><username>smith1</username><password>password</password></query></iq>
-WARNING:sleekxmpp.xmlstream.handler.waiter:Timed out waiting for IqWait_16be8457-dc75-41f3-9436-311bf9980e44-1
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="1760d69d-b6f2-43d5-a6f8-891853941b32-1"><query xmlns="jabber:iq:register"><username>smith1</username><password>password</password></query></iq>
+WARNING:sleekxmpp.xmlstream.handler.waiter:Timed out waiting for IqWait_1760d69d-b6f2-43d5-a6f8-891853941b32-1
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_end
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): </stream:stream>
 INFO:sleekxmpp.xmlstream.xmlstream:Waiting for </stream:stream> from server
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: disconnected
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION connected -> disconnected
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.09421456793 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.85692740136 seconds before connecting.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 127.0.0.1:5222
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="16be8457-dc75-41f3-9436-311bf9980e44-2"><query xmlns="jabber:iq:register"><username>smith1</username><password>password</password></query></iq>
-WARNING:sleekxmpp.xmlstream.handler.waiter:Timed out waiting for IqWait_16be8457-dc75-41f3-9436-311bf9980e44-2
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="1760d69d-b6f2-43d5-a6f8-891853941b32-2"><query xmlns="jabber:iq:register"><username>smith1</username><password>password</password></query></iq>
+WARNING:sleekxmpp.xmlstream.handler.waiter:Timed out waiting for IqWait_1760d69d-b6f2-43d5-a6f8-891853941b32-2
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_end
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): </stream:stream>
 INFO:sleekxmpp.xmlstream.xmlstream:Waiting for </stream:stream> from server
