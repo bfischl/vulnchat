@@ -2,11 +2,13 @@
 
 v0.0.1
 
+Dependencies: [sleekxmpp](http://sleekxmpp.com/) (pip install sleekxmpp)
+
 Written by: bfischl
 
 GPLv3 applies
 
-Vulnchat leverages xmpppy to simulate multiple clients for the use of traffic generation
+Vulnchat leverages SleekXMPP to simulate multiple clients for the use of traffic generation
 to a vulnerable server. It is intended for use with a vulnerable XMPP server which students
 can attack. The purpose of generating robust traffic is to increase the content to sift through
 after a successful attack. This framework provides the ability to modify settings in a way that

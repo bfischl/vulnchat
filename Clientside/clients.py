@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import sys
 import time
 import csv
@@ -84,26 +86,28 @@ def do_work(q, client, globalvars):
     :param globalvars: a copy of the globalvars sent from main thread
     :return: return 0 on completion
     """
-    timeout = 10
+    wait = 3
     attempts = 0
-    max_attempts = 5
+    max_attempts = 1
     logging.info("Beginning Registration")
+    client.register_plugin('xep_0077')
+    client.register_plugin('xep_0066')
+    client.register_plugin('xep_0004')
+    client.register_plugin('xep_0030')
     while client.get_reg_status() < 1:
         if attempts > max_attempts:
-            sys.exit(-1)
+            sys.exit(1)
         attempts +=1
         client.register(globalvars['SERVER'],globalvars['PORT'])
     logging.info("Client %d Registered", client.get_id())
-
-
     # Loops until able to connect to server, quits after max_failures
     while client.get_conn_status() < 1:
         if attempts > max_attempts:
             sys.exit(-1)
         attempts += 1
         client.connect(globalvars['SERVER'], globalvars['PORT'])
-        logging.critical("Client %d Cannot connect. Retrying in %d...", client.get_id(), timeout)
-        time.sleep(timeout)
+        logging.critical("Client %d Cannot connect. Retrying in %d...", client.get_id(), wait)
+        time.sleep(wait)
     # Checks for next message in queue, sorted by time to be sent
     next_message = client.poll_message()
     # These lines perform the timing logic
@@ -172,6 +176,6 @@ def main(argv):
     #logging.info("ALL THREADS STARTED")
     #for t in thread_list:
     #    t.join()
-    do_work(q,clientlist[1],globalvars)
+    return do_work(q,clientlist[1],globalvars)
 if __name__ == "__main__":
-    main(sys.argv[1:])
+     sys.exit(main(sys.argv[1:]))

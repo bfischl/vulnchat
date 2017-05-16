@@ -1,5 +1,7 @@
-import xmpp
+import sleekxmpp as xmpp
 import queue
+from sleekxmpp.exceptions import IqError, IqTimeout
+from sleekxmpp.util.misc_ops import setdefaultencoding
 
 
 class Message:
@@ -10,7 +12,7 @@ class Message:
         self.text = text
 
 
-class Client:
+class Client(xmpp.ClientXMPP):
     def __init__(self, userid, jid, displayname, password, useragent):
         """
         Initially, 
@@ -20,24 +22,18 @@ class Client:
         :param password: 
         :param useragent: 
         """
-        self.userId = userid
-        self.jid = jid
-        self.displayname = displayname
+        xmpp.ClientXMPP.__init__(self,jid,password)
         self.password = password
-        self.useragent = useragent
         self.message_queue = queue.PriorityQueue()
         self.registration_status = 0
         self.connection_status = 0
-        self.xmppclient = None
+        setdefaultencoding('utf8')
 
     def get_reg_status(self):
         return self.registration_status
 
     def get_conn_status(self):
         return self.connection_status
-
-    def get_id(self):
-        return int(self.userId)
 
     def add_message(self, tmp_message):
         """
@@ -48,32 +44,26 @@ class Client:
         self.message_queue.put((int(tmp_message.time), tmp_message))
 
     def register(self, server, port):
-        print "REGISTERING"
-        # Https://stackoverflow.com/questions/5131982/\
-        # is-there-any-python-xmpp-library-that-supports-adding-removing-users
-        jid = xmpp.protocol.JID(self.jid)
-        self.xmppclient = xmpp.Client(server=server)
-        self.xmppclient.connect((server,int(port)))
-        print "HERE"
-        self.registration_status = 1
-        #xmpp.features.getRegInfo(self.xmppclient, server, sync=True)
-        #print "Registering"
-        #if xmpp.features.register(self.xmppclient,("127.0.0.1",9090), {'username':self.jid,'password':self.password}):
-        #    self.registration_status = 1
+        print server
+        print port
+        self.connect((server,int(port)))
+        resp = self.Iq()
+        resp['type'] = 'set'
+        resp['register']['username'] = self.boundjid.user
+        resp['register']['password'] = self.password
+
+        print resp
+        try:
+            resp.send(now=True)
+        except IqError as e:
+            print "ERROR"
+            self.disconnect()
+        except IqTimeout:
+            print "TIMEOUT"
+            self.disconnect()
 
 
-    def connect(self, server, port):
-        """
-        :param server: The Server orxmpp IP address string to connect to
-        :param port: string of port to connect to
-        :return: 0 on success, -1 on fail
-        """
-        self.xmppclient = xmpp.Client(server, debug=[])
-        if not self.xmppclient.connect(server=(server, int(port))):
-            return -1
-        else:
-            self.connection_status = 1
-            return 0
+
 
     def poll_message(self):
         # type: () -> object
@@ -91,3 +81,4 @@ class Client:
         :return: 1-delivered, 0-failed
         """
         print message.text
+
