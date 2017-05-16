@@ -1,5 +1,4 @@
 # vulnchat
-__UNCLASSIFIED--EXERCISE__
 
 v0.0.1
 
