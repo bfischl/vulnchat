@@ -14,6 +14,15 @@ after a successful attack. This framework provides the ability to modify setting
 allows for different vulnerabilities to allow variety and increase difficulty for students and
 decrease ability to pass answers along.
 
+Each user defined in the user csv file is given its own thread. It has its own list of actions(limited to
+sending messages at this time) to take on the XMPP server. Each action (message to send) has a specified
+time to be completed. Each thread follows the general process:
+1. Register with XMPP Server
+1. Grab first message to send from its queue
+1. Sleep until it is time to send message
+1. Send message
+1. Grab next message, go to step 3
+1. Exit when queue is empty
 
 This software is provided as is, with no warranty and no expectation of support.
 
