@@ -86,36 +86,15 @@ def do_work(q, client, globalvars):
     :return: return 0 on completion
     """
     attempts = 0
-    max_attempts = 1
+    max_attempts = 5
     while client.get_reg_status() < 1:
         if attempts >= max_attempts:
             sys.exit(1)
         attempts += 1
         if client.connect((globalvars['SERVER'], globalvars['PORT'])):
             client.process(block=True)
-            print "DONE"
         else:
             print "UNABLE TO CONNECT"
-    logging.info("Client %d Registered", client.get_id())
-    # Loops until able to connect to server, quits after max_failures
-    # Checks for next message in queue, sorted by time to be sent
-    # These lines perform the timing logic
-    # 1. Compares HHOUR + Message.time - now
-    # 2. If that is positive, we have time left and we will sleep...If negative, we're late and we'll send now
-    # while next_message is not None:
-    #     tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
-    #     seconds_left = tmp_time_delta.total_seconds()
-    #     while seconds_left > 0:
-    #         time.sleep(int(seconds_left))
-    #         tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
-    #         seconds_left = tmp_time_delta.total_seconds()
-    #     # time to send next_message
-    #     if client.send_message(next_message[1]) < 0:
-    #         logging.warning("Message Failed:\t%s", next_message[1].text)
-    #     else:
-    #         logging.info("Message Sent:\t%s", next_message[1].text)
-    #     next_message = client.poll_message()
-    # logging.info("No more messages exiting")
     return 0
 
 
@@ -156,15 +135,14 @@ def main(argv):
     # start thread per user
     q = Queue.Queue()
     thread_list = list()
-    #for key, client in clientlist.iteritems():
-    #    t = threading.Thread(target=do_work, args=(q, client, globalvars))
-    #    t.daemon = True
-    #    t.start()
-    #    thread_list.append(t)
-    #    logging.debug("Thread for clientID %d started", int(key))
-    #logging.info("ALL THREADS STARTED")
-    #for t in thread_list:
-    #    t.join()
-    return do_work(q,clientlist[1],globalvars)
+    for key, client in clientlist.iteritems():
+        t = threading.Thread(target=do_work, args=(q, client, globalvars))
+        t.daemon = True
+        t.start()
+        thread_list.append(t)
+        logging.debug("Thread for clientID %d started", int(key))
+    logging.info("ALL THREADS STARTED")
+    for t in thread_list:
+        t.join()
 if __name__ == "__main__":
      sys.exit(main(sys.argv[1:]))

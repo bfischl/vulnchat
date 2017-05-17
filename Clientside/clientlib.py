@@ -30,23 +30,25 @@ class Client(xmpp.ClientXMPP):
         self.registration_status = 0
         self.connection_status = 0
         setdefaultencoding('utf8')
-        self.add_event_handler("session_start", self.start, threaded=True)
-        self.add_event_handler("register", self.register, threaded=True)
-        wait = 3
-        attempts = 0
-        max_attempts = 1
         logging.info("Beginning Registration")
         self.register_plugin('xep_0077')
         self.register_plugin('xep_0066')
         self.register_plugin('xep_0004')
         self.register_plugin('xep_0030')
         self['xep_0077'].force_registration = True
+        self.add_event_handler("session_start", self.start, threaded=True)
+        self.add_event_handler("register", self.register, threaded=True)
+        self.add_event_handler("message",self.getmessage,threaded=True)
+
+    def getmessage(self,message):
+        print message
+        print self.jid
 
     def sendmessage(self, message):
         """
-        :param message: Message Instance
+        :param message: Message Instance, uses sleekxmpp call to send_message
         """
-        print self.send_message(mto=message.dst,mbody=message.text)
+        self.send_message(mto=message.dst,mbody=message.text)
 
     def get_reg_status(self):
         return self.registration_status
@@ -64,22 +66,24 @@ class Client(xmpp.ClientXMPP):
         #self.message_queue.put((int(tmp_message.time), tmp_message))
 
     def start(self,event):
+
         self.send_presence()
         self.get_roster()
-        self.disconnect()
 
     def register(self, iq):
+
         resp = self.Iq()
         resp['type'] = 'set'
         resp['register']['username'] = self.boundjid.user
         resp['register']['password'] = self.password
         try:
             resp.send(now=True)
-            self.get_reg_status = 1
-        except IqError:
-            print IqError
-            self.disconnect()
-            sys.exit(2)
+            self.registration_status = 1
+        except IqError as e:
+            if e.condition != 'conflict':
+                self.registration_status = 1
+                self.disconnect()
+                sys.exit(2)
         except IqTimeout:
             print "Timeout"
             self.disconnect()
