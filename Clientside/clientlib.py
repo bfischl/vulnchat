@@ -42,12 +42,11 @@ class Client(xmpp.ClientXMPP):
         self.register_plugin('xep_0030')
         self['xep_0077'].force_registration = True
 
-    def send_message(self, message):
+    def sendmessage(self, message):
         """
-        :param message: string message to send
-        :return: 1-delivered, 0-failed
+        :param message: Message Instance
         """
-        print message.text
+        print self.send_message(mto=message.dst,mbody=message.text)
 
     def get_reg_status(self):
         return self.registration_status
@@ -61,7 +60,7 @@ class Client(xmpp.ClientXMPP):
         :param tmp_message: Message object to be added to priority queue based on time 
         :return: 1 on success, 0 on fail
         """
-        self.scheduler.add("Send Message",int(tmp_message.time),self.send_message,(tmp_message,))
+        self.scheduler.add("Send Message",int(tmp_message.time),self.sendmessage,(tmp_message,))
         #self.message_queue.put((int(tmp_message.time), tmp_message))
 
     def start(self,event):
@@ -77,11 +76,14 @@ class Client(xmpp.ClientXMPP):
         try:
             resp.send(now=True)
             self.get_reg_status = 1
-        except IqError as e:
+        except IqError:
+            print IqError
             self.disconnect()
+            sys.exit(2)
         except IqTimeout:
             print "Timeout"
             self.disconnect()
+
     #def poll_message(self):
         # type: () -> object
     #    """

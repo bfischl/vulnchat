@@ -76,8 +76,6 @@ def load_csv(infile, outdict, key):
             outdict[row[key]] = row
     return outdict
 
-def doprint():
-    print "TEST2"
 def do_work(q, client, globalvars):
     """ The worker thread, attempts to connect to server and port.
     Seeks to send the assigned messages in the client.message_queue at the right time
