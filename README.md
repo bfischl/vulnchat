@@ -18,11 +18,9 @@ decrease ability to pass answers along.
 Each user defined in the user csv file is given its own thread. It has its own list of actions(limited to
 sending messages at this time) to take on the XMPP server. Each action (message to send) has a specified
 time to be completed. Each thread follows the general process:
-1. Register with XMPP Server
-1. Grab first message to send from its queue
-1. Sleep until it is time to send message
-1. Send message
-1. Grab next message, go to step 3
+1. Add scheduled events for each message it is responsible for (self.scheduler.add())
+1. Connect to XMPP Server, register if no registration found
+1. Send messages
 1. Exit when queue is empty
 
 This software is provided as is, with no warranty and no expectation of support.
@@ -50,13 +48,12 @@ settings.txt contains the default settings
 user.csv must contain:
 * userid (unique)
 * jid
-* displayname
 * password
 * useragent
 
 conversation.csv must contain:
 * messageid (unique)
 * senderid  (must match a userid, above)
-* destid    (must match a userid, above)
+* destid    (must match a jid, above)
 * time      (in seconds after *HHOUR*, a datetime object in settings)
 * message   (string value of message to be sent)
