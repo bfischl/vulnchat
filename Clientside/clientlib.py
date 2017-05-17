@@ -78,7 +78,6 @@ class Client(xmpp.ClientXMPP):
             resp.send(now=True)
             self.get_reg_status = 1
         except IqError as e:
-            print "ERROR %s" % e.iq['error']['text']
             self.disconnect()
         except IqTimeout:
             print "Timeout"
