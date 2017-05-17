@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
-import time
 import csv
 import getopt
 import Queue
 import threading
 import logging
 from datetime import datetime
-from datetime import timedelta
 from clientlib import Client
 from clientlib import Message
 
@@ -76,6 +74,7 @@ def load_csv(infile, outdict, key):
             outdict[row[key]] = row
     return outdict
 
+
 def do_work(q, client, globalvars):
     """ The worker thread, attempts to connect to server and port.
     Seeks to send the assigned messages in the client.message_queue at the right time
@@ -91,7 +90,7 @@ def do_work(q, client, globalvars):
         if attempts >= max_attempts:
             sys.exit(1)
         attempts += 1
-        if client.connect((globalvars['SERVER'], globalvars['PORT'])):
+        if client.connect((globalvars['SERVER'], globalvars['PORT']), use_tls=False):
             client.process(block=True)
         else:
             print "UNABLE TO CONNECT"
@@ -122,7 +121,7 @@ def main(argv):
     # instantiate and load clients objects and add to a dict
     clientlist = dict()
     for key, value in clients.iteritems():
-        clientlist[int(value['userid'])] = Client(value['userid'], value['jid'], value['displayname'],
+        clientlist[int(value['userid'])] = Client(value['userid'], value['jid'],
                                                   value['password'], value['useragent'])
     # load conversation file .csv, format found in README
     convos = {}
@@ -144,5 +143,7 @@ def main(argv):
     logging.info("ALL THREADS STARTED")
     for t in thread_list:
         t.join()
+
+
 if __name__ == "__main__":
-     sys.exit(main(sys.argv[1:]))
+    sys.exit(main(sys.argv[1:]))

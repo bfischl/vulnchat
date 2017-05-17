@@ -4,7 +4,7 @@ import sys
 import logging
 from sleekxmpp.exceptions import IqError, IqTimeout
 from sleekxmpp.util.misc_ops import setdefaultencoding
-import dns
+
 
 class Message:
     def __init__(self, messageid, time, dst, text):
@@ -15,7 +15,7 @@ class Message:
 
 
 class Client(xmpp.ClientXMPP):
-    def __init__(self, userid, jid, displayname, password, useragent):
+    def __init__(self, userid, jid, password, useragent):
         """
         Initially, 
         :param userid: 
@@ -24,7 +24,7 @@ class Client(xmpp.ClientXMPP):
         :param password: 
         :param useragent: 
         """
-        xmpp.ClientXMPP.__init__(self,jid,password)
+        xmpp.ClientXMPP.__init__(self, jid, password)
         self.password = password
         self.message_queue = queue.PriorityQueue()
         self.registration_status = 0
@@ -38,9 +38,9 @@ class Client(xmpp.ClientXMPP):
         self['xep_0077'].force_registration = True
         self.add_event_handler("session_start", self.start, threaded=True)
         self.add_event_handler("register", self.register, threaded=True)
-        self.add_event_handler("message",self.getmessage,threaded=True)
+        self.add_event_handler("message", self.getmessage, threaded=True)
 
-    def getmessage(self,message):
+    def getmessage(self, message):
         print message
         print self.jid
 
@@ -48,7 +48,7 @@ class Client(xmpp.ClientXMPP):
         """
         :param message: Message Instance, uses sleekxmpp call to send_message
         """
-        self.send_message(mto=message.dst,mbody=message.text)
+        self.send_message(mto=message.dst, mbody=message.text)
 
     def get_reg_status(self):
         return self.registration_status
@@ -62,15 +62,15 @@ class Client(xmpp.ClientXMPP):
         :param tmp_message: Message object to be added to priority queue based on time 
         :return: 1 on success, 0 on fail
         """
-        self.scheduler.add("Send Message",int(tmp_message.time),self.sendmessage,(tmp_message,))
-        #self.message_queue.put((int(tmp_message.time), tmp_message))
+        self.scheduler.add("Send Message", int(tmp_message.time), self.sendmessage, (tmp_message,))
+        # self.message_queue.put((int(tmp_message.time), tmp_message))
 
-    def start(self,event):
+    def start(self):
 
         self.send_presence()
         self.get_roster()
 
-    def register(self, iq):
+    def register(self):
 
         resp = self.Iq()
         resp['type'] = 'set'
@@ -88,7 +88,7 @@ class Client(xmpp.ClientXMPP):
             print "Timeout"
             self.disconnect()
 
-    #def poll_message(self):
+    # def poll_message(self):
         # type: () -> object
     #    """
     #    :return: Next Message on queue or None if queue empty
