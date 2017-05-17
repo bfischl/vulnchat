@@ -64,28 +64,88 @@ DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0030: Service Discovery
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0066: Out of Band Data
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0004: Data Forms
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0077: In-Band Registration
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.86103923 seconds before connecting.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying localhost for AAAA records.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for localhost
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying localhost for A records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to [::1]:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.94809354927 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="1760d69d-b6f2-43d5-a6f8-891853941b32-1"><query xmlns="jabber:iq:register"><username>smith1</username><password>password</password></query></iq>
-WARNING:sleekxmpp.xmlstream.handler.waiter:Timed out waiting for IqWait_1760d69d-b6f2-43d5-a6f8-891853941b32-1
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='servermax1507' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="69yz873ojf" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <proceed xmlns="urn:ietf:params:xml:ns:xmpp-tls" />
+DEBUG:sleekxmpp.features.feature_starttls.starttls:Starting TLS
+INFO:sleekxmpp.xmlstream.xmlstream:Negotiating TLS
+INFO:sleekxmpp.xmlstream.xmlstream:Using SSL version: TLS 1.0
+DEBUG:sleekxmpp.xmlstream.xmlstream:CERT: -----BEGIN CERTIFICATE-----
+MIIDGjCCAgKgAwIBAgIIGbTDTQv+Z3EwDQYJKoZIhvcNAQELBQAwGDEWMBQGA1UE
+AwwNc2VydmVybWF4MTUwNzAeFw0xNzA1MTYxNTI2MjhaFw0yMjA1MTUxNTI2Mjha
+MBgxFjAUBgNVBAMMDXNlcnZlcm1heDE1MDcwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQCHRma/PJrSGle8yTNoBTWbYZ8d/49wToZWedKaDu+9GFpBcGV3
+FKA/M1ebibSSQ5Szw2x2Xmn4revE9XqX1lpmyiEmHTsCPmD+GEf8WfQEhjzrL1t9
+6durksubw12GA8Xh8Z2vp22qHU/ABc6+U1Owv9EBjYdiX8CUeBsDlpwxMjEetdIz
+r1GkWkGDrLO9+TqbOAGWuk8EdNU+HqiDYPeO1rvZmFSn2vXoQuSzN7E5j+qlfqJr
+eUn/4mU/kISWSH5eIiqQNPkIBlTiRoTNYiKgw8IA3qPn8QVc4ayyTDWvqi4NaJSW
+VJc++pb3528j/lXCpqonCduAnb0S7qRW6d7xAgMBAAGjaDBmMCQGA1UdEQQdMBug
+GQYIKwYBBQUHCAUMDXNlcnZlcm1heDE1MDcwHQYDVR0OBBYEFIsgCxS0ILxpprAQ
+lG6J6yG4IaVaMB8GA1UdIwQYMBaAFIsgCxS0ILxpprAQlG6J6yG4IaVaMA0GCSqG
+SIb3DQEBCwUAA4IBAQCBENFKgLS2oO9dnCpA2i39rA6qL+xCv0i3QemW22iav2/J
+Z/mhhlCUT3ojjSdJtNots/dDCXyfG09qNEclWuhODG3aDvVVmjwNHq1Bl4JiIHf7
++OsIIEElzK8yxBlfW9A/f0pfzbLib/NxXPEu0HaSiYHzwdxhy3a1rFpNwxvRL53r
+DQA+XD40gV4NZWwfLeEuDoZveKZ5vsPCT2CVSDtWP9uQq0tS558nRXrGXGiS7MCh
+lJBRY910Hb33O4XP9hWJqbS/0GFoNsMaO91jCLwz9B2wcL23fk92RP7VkAnxHftU
+cv06WAvqtoYhM06+RhDjzpS91v2E0YGYUxOhsOid
+-----END CERTIFICATE-----
+
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: ssl_cert
+WARNING:sleekxmpp.xmlstream.cert:Could not find pyasn1 and pyasn1_modules. SSL certificate COULD NOT BE VERIFIED.
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='servermax1507' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="69yz873ojf" xml:lang="en">
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-2"><query xmlns="jabber:iq:register"><username>adams1</username><password>check</password></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/69yz873ojf" type="error" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-2"><query xmlns="jabber:iq:register"><username>adams1</username><password>check</password></query><error code="409" type="cancel"><conflict xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /></error></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">eSwsbj1hZGFtczEscj0wODAwMTQ3NDA5OTQ1</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wODAwMTQ3NDA5OTQ1MjA0M2EyNDctY2I3NS00MzJlLWJjMGEtN2Y4NzkzY2RhMTk3LHM9MU1tNFdnVytuRlArTDVmUFowU3lyK2lhdWRaVHJzdE4saT00MDk2</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1lU3dzLHI9MDgwMDE0NzQwOTk0NTIwNDNhMjQ3LWNiNzUtNDMyZS1iYzBhLTdmODc5M2NkYTE5NyxwPWpDNFNhTXlhdW1YTUZaOHFHbHdWb2x3cGMxOD0=</response>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1qSlZRSG5GeFVJZmczcnBPTlFxa1FaUkpITnM9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='servermax1507' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="69yz873ojf" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-3"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/69yz873ojf" type="result" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-3"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>adams1@servermax1507/69yz873ojf</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: adams1@servermax1507/69yz873ojf
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-4"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="adams1@servermax1507/69yz873ojf" type="result" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-4" />
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+WARNING:sleekxmpp.xmlstream.cert:Could not find pyasn1 and pyasn1_modules. SSL certificate expiration COULD NOT BE VERIFIED.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: sent_presence
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <presence xml:lang="en" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="get" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-5"><query xmlns="jabber:iq:roster" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="adams1@servermax1507/69yz873ojf" type="result" id="f9174d30-a867-4dca-bb9a-7839d24c2f05-5"><query xmlns="jabber:iq:roster" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: roster_update
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_end
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): </stream:stream>
 INFO:sleekxmpp.xmlstream.xmlstream:Waiting for </stream:stream> from server
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: disconnected
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION connected -> disconnected
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.85692740136 seconds before connecting.
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 127.0.0.1:5222
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="1760d69d-b6f2-43d5-a6f8-891853941b32-2"><query xmlns="jabber:iq:register"><username>smith1</username><password>password</password></query></iq>
-WARNING:sleekxmpp.xmlstream.handler.waiter:Timed out waiting for IqWait_1760d69d-b6f2-43d5-a6f8-891853941b32-2
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_end
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): </stream:stream>
-INFO:sleekxmpp.xmlstream.xmlstream:Waiting for </stream:stream> from server
+ERROR:sleekxmpp.xmlstream.xmlstream:Error reading from XML stream.
+DEBUG:sleekxmpp.thirdparty.statemachine:==== Could not acquire lock in 2.0 sec: connected -> disconnected 
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting for 3 threads to exit.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Stopped send thread. 2 threads remain.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Stopped event runner thread. 1 threads remain.
+DEBUG:sleekxmpp.xmlstream.scheduler:Quitting Scheduler thread
+DEBUG:sleekxmpp.xmlstream.xmlstream:Stopped scheduler thread. 0 threads remain.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: disconnected
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION connected -> disconnected

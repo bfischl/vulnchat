@@ -2,7 +2,7 @@ import sleekxmpp as xmpp
 import queue
 from sleekxmpp.exceptions import IqError, IqTimeout
 from sleekxmpp.util.misc_ops import setdefaultencoding
-
+import dns
 
 class Message:
     def __init__(self, messageid, time, dst, text):
@@ -28,7 +28,8 @@ class Client(xmpp.ClientXMPP):
         self.registration_status = 0
         self.connection_status = 0
         setdefaultencoding('utf8')
-
+        self.add_event_handler("session_start", self.start, threaded=True)
+        self.add_event_handler("register", self.register, threaded=True)
     def get_reg_status(self):
         return self.registration_status
 
@@ -43,28 +44,24 @@ class Client(xmpp.ClientXMPP):
         """
         self.message_queue.put((int(tmp_message.time), tmp_message))
 
-    def register(self, server, port):
-        print server
-        print port
-        self.connect((server,int(port)))
+    def start(self,event):
+        self.send_presence()
+        self.get_roster()
+        self.disconnect()
+
+    def register(self, iq):
         resp = self.Iq()
         resp['type'] = 'set'
         resp['register']['username'] = self.boundjid.user
         resp['register']['password'] = self.password
-
-        print resp
         try:
             resp.send(now=True)
+            self.get_reg_status = 1
         except IqError as e:
-            print "ERROR"
-            self.disconnect()
+            print "ERROR %s" % e.iq['error']['text']
         except IqTimeout:
-            print "TIMEOUT"
-            self.disconnect()
-
-
-
-
+            print "Timeout" \
+                  ""
     def poll_message(self):
         # type: () -> object
         """

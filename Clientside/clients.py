@@ -96,10 +96,14 @@ def do_work(q, client, globalvars):
     client.register_plugin('xep_0030')
     client['xep_0077'].force_registration = True
     while client.get_reg_status() < 1:
-        if attempts > max_attempts:
+        if attempts >= max_attempts:
             sys.exit(1)
         attempts +=1
-        client.register(globalvars['SERVER'],globalvars['PORT'])
+        if client.connect((globalvars['SERVER'],globalvars['PORT'])):
+            client.process(block=True)
+            print "DONE"
+        else:
+            print "UNABLE TO CONNECT"
     logging.info("Client %d Registered", client.get_id())
     # Loops until able to connect to server, quits after max_failures
     while client.get_conn_status() < 1:

@@ -1,4 +1,4 @@
-SERVER=localhost
+SERVER=servermax1507
 PORT=5222
 #HHOUR='2017-04-26 14:33:12.0'
 CFILE=conversations.csv
