@@ -1,5 +1,7 @@
 import sleekxmpp as xmpp
 import queue
+import sys
+import logging
 from sleekxmpp.exceptions import IqError, IqTimeout
 from sleekxmpp.util.misc_ops import setdefaultencoding
 import dns
@@ -30,6 +32,23 @@ class Client(xmpp.ClientXMPP):
         setdefaultencoding('utf8')
         self.add_event_handler("session_start", self.start, threaded=True)
         self.add_event_handler("register", self.register, threaded=True)
+        wait = 3
+        attempts = 0
+        max_attempts = 1
+        logging.info("Beginning Registration")
+        self.register_plugin('xep_0077')
+        self.register_plugin('xep_0066')
+        self.register_plugin('xep_0004')
+        self.register_plugin('xep_0030')
+        self['xep_0077'].force_registration = True
+
+    def send_message(self, message):
+        """
+        :param message: string message to send
+        :return: 1-delivered, 0-failed
+        """
+        print message.text
+
     def get_reg_status(self):
         return self.registration_status
 
@@ -42,7 +61,8 @@ class Client(xmpp.ClientXMPP):
         :param tmp_message: Message object to be added to priority queue based on time 
         :return: 1 on success, 0 on fail
         """
-        self.message_queue.put((int(tmp_message.time), tmp_message))
+        self.scheduler.add("Send Message",int(tmp_message.time),self.send_message,(tmp_message,))
+        #self.message_queue.put((int(tmp_message.time), tmp_message))
 
     def start(self,event):
         self.send_presence()
@@ -59,23 +79,17 @@ class Client(xmpp.ClientXMPP):
             self.get_reg_status = 1
         except IqError as e:
             print "ERROR %s" % e.iq['error']['text']
+            self.disconnect()
         except IqTimeout:
-            print "Timeout" \
-                  ""
-    def poll_message(self):
+            print "Timeout"
+            self.disconnect()
+    #def poll_message(self):
         # type: () -> object
-        """
-        :return: Next Message on queue or None if queue empty
-        """
-        try:
-            return self.message_queue.get(block=False)
-        except queue.Empty:
-            return None
-
-    def send_message(self, message):
-        """
-        :param message: string message to send
-        :return: 1-delivered, 0-failed
-        """
-        print message.text
+    #    """
+    #    :return: Next Message on queue or None if queue empty
+    #    """
+    #    try:
+    #        return self.message_queue.get(block=False)
+    #    except queue.Empty:
+    #        return None
 

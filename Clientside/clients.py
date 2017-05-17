@@ -76,7 +76,8 @@ def load_csv(infile, outdict, key):
             outdict[row[key]] = row
     return outdict
 
-
+def doprint():
+    print "TEST2"
 def do_work(q, client, globalvars):
     """ The worker thread, attempts to connect to server and port.
     Seeks to send the assigned messages in the client.message_queue at the right time
@@ -86,52 +87,37 @@ def do_work(q, client, globalvars):
     :param globalvars: a copy of the globalvars sent from main thread
     :return: return 0 on completion
     """
-    wait = 3
     attempts = 0
     max_attempts = 1
-    logging.info("Beginning Registration")
-    client.register_plugin('xep_0077')
-    client.register_plugin('xep_0066')
-    client.register_plugin('xep_0004')
-    client.register_plugin('xep_0030')
-    client['xep_0077'].force_registration = True
     while client.get_reg_status() < 1:
         if attempts >= max_attempts:
             sys.exit(1)
-        attempts +=1
-        if client.connect((globalvars['SERVER'],globalvars['PORT'])):
+        attempts += 1
+        if client.connect((globalvars['SERVER'], globalvars['PORT'])):
             client.process(block=True)
             print "DONE"
         else:
             print "UNABLE TO CONNECT"
     logging.info("Client %d Registered", client.get_id())
     # Loops until able to connect to server, quits after max_failures
-    while client.get_conn_status() < 1:
-        if attempts > max_attempts:
-            sys.exit(-1)
-        attempts += 1
-        client.connect(globalvars['SERVER'], globalvars['PORT'])
-        logging.critical("Client %d Cannot connect. Retrying in %d...", client.get_id(), wait)
-        time.sleep(wait)
     # Checks for next message in queue, sorted by time to be sent
-    next_message = client.poll_message()
     # These lines perform the timing logic
     # 1. Compares HHOUR + Message.time - now
     # 2. If that is positive, we have time left and we will sleep...If negative, we're late and we'll send now
-    while next_message is not None:
-        tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
-        seconds_left = tmp_time_delta.total_seconds()
-        while seconds_left > 0:
-            time.sleep(int(seconds_left))
-            tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
-            seconds_left = tmp_time_delta.total_seconds()
-        # time to send next_message
-        if client.send_message(next_message[1]) < 0:
-            logging.warning("Message Failed:\t%s", next_message[1].text)
-        else:
-            logging.info("Message Sent:\t%s", next_message[1].text)
-        next_message = client.poll_message()
-    logging.info("No more messages exiting")
+    # while next_message is not None:
+    #     tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
+    #     seconds_left = tmp_time_delta.total_seconds()
+    #     while seconds_left > 0:
+    #         time.sleep(int(seconds_left))
+    #         tmp_time_delta = to_datetime(globalvars['HHOUR']) + timedelta(0, int(next_message[1].time)) - datetime.now()
+    #         seconds_left = tmp_time_delta.total_seconds()
+    #     # time to send next_message
+    #     if client.send_message(next_message[1]) < 0:
+    #         logging.warning("Message Failed:\t%s", next_message[1].text)
+    #     else:
+    #         logging.info("Message Sent:\t%s", next_message[1].text)
+    #     next_message = client.poll_message()
+    # logging.info("No more messages exiting")
     return 0
 
 
