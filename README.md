@@ -39,6 +39,8 @@ USAGE
 
 Any command line argument will be used in place of the default values in settings.txt
 
+
+
 UNDERSTANDING CONFIGS
 ---------------------
 
@@ -57,3 +59,12 @@ conversation.csv must contain:
 * destid    (must match a jid, above)
 * time      (in seconds after *HHOUR*, a datetime object in settings)
 * message   (string value of message to be sent)
+
+TODO
+----
+1. Switch to JSON
+    * Users and actions should be JSON'ed
+1. Switch from "conversations" to "actions", implement more callbacks
+1. Implement event handler
+    * Main thread receives events in JSON format and calls actions based on them
+1. Error Check on loading json files, once completed
