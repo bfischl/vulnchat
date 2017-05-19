@@ -67,4 +67,5 @@ TODO
 1. Switch from "conversations" to "actions", implement more callbacks
 1. Implement event handler
     * Main thread receives events in JSON format and calls actions based on them
+        * For example, user X's phone is destroyed. User X's scheduled actions should all be destroyed
 1. Error Check on loading json files, once completed
