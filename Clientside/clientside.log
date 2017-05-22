@@ -109,43 +109,76 @@ DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0066: Out of Band Data
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0004: Data Forms
 DEBUG:sleekxmpp.plugins.base:Loaded Plugin: XEP-0077: In-Band Registration
 INFO:root:ALL CONVOS LOADED
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.33886033178 seconds before connecting.
 DEBUG:root:Thread for clientID 1 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.67940847794 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.05187353275 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.22974760981 seconds before connecting.
 DEBUG:root:Thread for clientID 2 started
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.92620761851 seconds before connecting.
 DEBUG:root:Thread for clientID 3 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.98870423445 seconds before connecting.
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.0653277674 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.20207147725 seconds before connecting.
 DEBUG:root:Thread for clientID 4 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.78083887056 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.31092155589 seconds before connecting.
 DEBUG:root:Thread for clientID 5 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.85447386468 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.86303373449 seconds before connecting.
 DEBUG:root:Thread for clientID 6 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.9963978004 seconds before connecting.
 DEBUG:root:Thread for clientID 7 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.01778941323 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.76440309754 seconds before connecting.
 DEBUG:root:Thread for clientID 8 started
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.87125163262 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.21045629089 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.22069212981 seconds before connecting.
 DEBUG:root:Thread for clientID 9 started
+DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 1.75686849388 seconds before connecting.
 DEBUG:root:Thread for clientID 10 started
 INFO:root:ALL THREADS STARTED
-DEBUG:sleekxmpp.xmlstream.xmlstream:Waiting 2.13176989183 seconds before connecting.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
 DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="32bzdbhem1" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="r83a7l3qt" xml:lang="en">
 DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="8y3jhjeu94" xml:lang="en">
 DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a64b450>>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d7ba0e10>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1maXNoZXIscj03NTUwMjI3Nzg0Nw==</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d7293290>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
@@ -162,8 +195,9 @@ Traceback (most recent call last):
 TypeError: register() takes exactly 1 argument (2 given)
 DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
 DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1qb2huc29uMixyPTk2ODE5NDY5MTQ=</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj05NjgxOTQ2OTE0Y2QzYjc4NGQtNGM3MC00MzIyLTk2NWEtODMzYjgyOTlmZTlhLHM9WEk4eDNSTHJnVVV2VXJiSW1UM01vbXJvM2JsVEVzTDksaT00MDk2</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1jYXJsc29uLHI9MTA5Mzc3Nzc1MDM3</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj03NTUwMjI3Nzg0NzY1NTJmN2RlLTFjNTEtNDlkZi1hY2IxLTRiZjNiODgxNjU3ZCxzPXgwSGhnb3FhcDNIdGR6UGlCOU9WY25XQm5ydnNERm5KLGk9NDA5Ng==</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0xMDkzNzc3NzUwMzdiYWJmZTFhMi1jMzlmLTQxMTQtOTNjOC05ZDM2YTEzZGVkZDMscz10MExDMkFxQmgzSmJQVzR2L0ZUWDJseUZSYlo4ZEFVRCxpPTQwOTY=</challenge>
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
@@ -172,555 +206,495 @@ DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
 DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
 DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="2nsfjarrnh" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="89fsk4a6h4" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
 DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
 DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9OTY4MTk0NjkxNGNkM2I3ODRkLTRjNzAtNDMyMi05NjVhLTgzM2I4Mjk5ZmU5YSxwPXpScUtueCtCVFlvWmhkblhjZU9NczFGb1hxOD0=</response>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj14N0ZXQzhTaEJNeUJjZ2VHTExoN3JiQlNCR289</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="9de12e81-3873-490a-b7e1-65a4848bf826-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MTA5Mzc3Nzc1MDM3YmFiZmUxYTItYzM5Zi00MTE0LTkzYzgtOWQzNmExM2RlZGQzLHA9SXB0bTcrWW1teWZ6MGNUZXR4a2FkN2V2RlpvPQ==</response>
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1valZ1TS9MYmVPcW5qemNkL0RGdFBpMXNDQ0E9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="9de12e81-3873-490a-b7e1-65a4848bf826-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="32bzdbhem1" xml:lang="en">
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a659990>>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d72a3810>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
 TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="9re0wqwup1" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="8y3jhjeu94" xml:lang="en">
 ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
 TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
 ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
 TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
 DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
 DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1hZGFtczUscj0wNzY0NjE5NzA1OTk4</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/32bzdbhem1" type="result" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>johnson2@servermax1507/32bzdbhem1</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wNzY0NjE5NzA1OTk4ZmEzYmZjOTAtN2UzMi00Zjk1LWI2OTUtY2Y5ZGMyMmMwN2IzLHM9VXRXY3ZmQ3pST2MyRkc1V0pSU2wyWnRBblVGb0Y1aXIsaT00MDk2</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/8y3jhjeu94" type="result" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>carlson@servermax1507/8y3jhjeu94</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1icml4dG9uLHI9MDY1MjM2ODI5MDk3NA==</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9NzU1MDIyNzc4NDc2NTUyZjdkZS0xYzUxLTQ5ZGYtYWNiMS00YmYzYjg4MTY1N2QscD05ejVNbHlRTUxwaFFQenR2bzg1OERRbDZlYkE9</response>
 DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wNjUyMzY4MjkwOTc0ZjA5MmM4NjctMWM4Ny00ZTAzLTg4ZTYtYzc1ZmFlYzAwODczLHM9aHo3LzUrY1RNMXFocDVxK1BYZUxpRkN6R2ZVTFVtR0osaT00MDk2</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj16bytrZUsyNFRrNjNpS0dJNW1GLzhIZm1FekU9</success>
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: johnson2@servermax1507/32bzdbhem1
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="johnson2@servermax1507/32bzdbhem1" type="result" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-3" />
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d72bbd10>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: carlson@servermax1507/8y3jhjeu94
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="r83a7l3qt" xml:lang="en">
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
 DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="carlson@servermax1507/8y3jhjeu94" type="result" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-3" />
 DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj13aWxzb24zLHI9MDU1ODYxOTQ3MTM3Nw==</auth>
 DEBUG:sleekxmpp.features.feature_session.session:Established Session
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
 DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="56cf28eb-7ef1-459f-b803-f9485adf6e41-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDc2NDYxOTcwNTk5OGZhM2JmYzkwLTdlMzItNGY5NS1iNjk1LWNmOWRjMjJjMDdiMyxwPTNmdHZMYUx0SGJ2MmRyNys3QVJibTE2Vm5wVT0=</response>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="4c8imkd0fp" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a64b450>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="7jr3jstxa2" xml:lang="en">
-ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj0rUnNNbjRjMmF0VEJQUk9XMzlLVlE5S0RITUE9</success>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="2nsfjarrnh" xml:lang="en">
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a6179d0>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="4c1mt2u9gu" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/2nsfjarrnh" type="result" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>adams5@servermax1507/2nsfjarrnh</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a626f50>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="ay0lq11hqw" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-1"><query xmlns="jabber:iq:register" /></iq>
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: adams5@servermax1507/2nsfjarrnh
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1icml4dG9uLHI9OTQ4MzIzODA3MjA4</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="8c050ba5-4dd1-42c6-a646-995418360cce-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj05NDgzMjM4MDcyMDhkYjBlZGYxYS0xYmExLTQ1NDMtOGM3OC02MzAyMjBmMTNlMDAscz1oejcvNStjVE0xcWhwNXErUFhlTGlGQ3pHZlVMVW1HSixpPTQwOTY=</challenge>
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="adams5@servermax1507/2nsfjarrnh" type="result" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-3" />
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1lY2tlcixyPTA0MTYxMzUzMTM3MjI=</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="8c050ba5-4dd1-42c6-a646-995418360cce-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.features.feature_session.session:Established Session
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wNDE2MTM1MzEzNzIyMDhhZmExMGMtMDRmMy00ZGVkLWEyMWQtMjY0YTQ2NTJkYWI1LHM9aVpFMlp5VFoxUkF6YmR1NzNNRUF3VWJQbnpZK2lVaDksaT00MDk2</challenge>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a607450>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a6aeed0>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="27189c46-2ec8-444e-a4fe-b11d78e1a609-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a659990>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1jYXJsc29uLHI9MDczMjI3NTYyMDI4Mw==</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj13aWxzb24zLHI9OTk3NTEwOTIyOTk1</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wNzMyMjc1NjIwMjgzZTZiNzUxODgtZTMxYi00NjczLWEyNWYtZGVlNjVjNzBlM2FlLHM9dDBMQzJBcUJoM0piUFc0di9GVFgybHlGUmJaOGRBVUQsaT00MDk2</challenge>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj05OTc1MTA5MjI5OTVmMGU5MzNmZC1iNjRiLTQ4MjctOWJhMi0xZGU0ODc3MTQ5YTQscz00Rjk0aUdGWlhsTG11SW1DOTBBTjl3QktHWDlsaDkyayxpPTQwOTY=</challenge>
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9OTQ4MzIzODA3MjA4ZGIwZWRmMWEtMWJhMS00NTQzLThjNzgtNjMwMjIwZjEzZTAwLHA9OG90S3R2NDdoaXp4UHczY0ExWVUzemRZWERrPQ==</response>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDQxNjEzNTMxMzcyMjA4YWZhMTBjLTA0ZjMtNGRlZC1hMjFkLTI2NGE0NjUyZGFiNSxwPWV0cUgzQ0hjNmtoQlpqTDdIUFI2bFQ4d1NJaz0=</response>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1JRTRJb2E0VUxtQ2ptM3FTMTBUOHhFc3h2cFk9</success>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj03RDRQdDBjaWY3Q0dJQlZXdDZuRGJMUnBja2s9</success>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9OTk3NTEwOTIyOTk1ZjBlOTMzZmQtYjY0Yi00ODI3LTliYTItMWRlNDg3NzE0OWE0LHA9cC9OeC80SFZQZVE5NWlKaUQwUEZzbmZPcVNnPQ==</response>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="4c8imkd0fp" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1hZFhaYS9kN2FZdktGZ3V1TFB4VllRL2NMc0E9</success>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="2z97ya9y61" xml:lang="en">
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="4l0sc0tyyo" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="7jr3jstxa2" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDczMjI3NTYyMDI4M2U2Yjc1MTg4LWUzMWItNDY3My1hMjVmLWRlZTY1YzcwZTNhZSxwPXdxajNpcURJMjY1Zzh4bk9FN0MyM1l3Y1E5TT0=</response>
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj13blVZVUlXQi9XMjV1T3FrbXhuZi85S2FyMzQ9</success>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="ay0lq11hqw" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="4d5de900-bd40-4c66-81c3-a8033612e21f-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/4c8imkd0fp" type="result" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>brixton@servermax1507/4c8imkd0fp</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="6adu1us4ll" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="4d5de900-bd40-4c66-81c3-a8033612e21f-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="4c1mt2u9gu" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/7jr3jstxa2" type="result" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>ecker@servermax1507/7jr3jstxa2</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: brixton@servermax1507/4c8imkd0fp
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="8c050ba5-4dd1-42c6-a646-995418360cce-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="ad7ba067-a558-4c27-983a-275a202d2bd9-1"><query xmlns="jabber:iq:register" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a5c1550>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a669ed0>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/ay0lq11hqw" type="result" id="8c050ba5-4dd1-42c6-a646-995418360cce-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>wilson3@servermax1507/ay0lq11hqw</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: ecker@servermax1507/7jr3jstxa2
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="ad7ba067-a558-4c27-983a-275a202d2bd9-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="brixton@servermax1507/4c8imkd0fp" type="result" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-3" />
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
-DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_session.session:Established Session
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/4c1mt2u9gu" type="result" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>carlson@servermax1507/4c1mt2u9gu</jid></bind></iq>
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3d702f50>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDY1MjM2ODI5MDk3NGYwOTJjODY3LTFjODctNGUwMy04OGU2LWM3NWZhZWMwMDg3MyxwPWdabXlJWFdWbFpvNVN6UXJQOU5tUldXbGMxTT0=</response>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/r83a7l3qt" type="result" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>fisher@servermax1507/r83a7l3qt</jid></bind></iq>
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='servermax1507' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="ecker@servermax1507/7jr3jstxa2" type="result" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-3" />
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wNTU4NjE5NDcxMzc3MTYwYzhhZDEtMmY4OS00MjFkLWIxNzQtNWZmMjExYzgwNzE4LHM9NEY5NGlHRlpYbExtdUltQzkwQU45d0JLR1g5bGg5MmssaT00MDk2</challenge>
 DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="2yat6oap9k" xml:lang="en">
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: wilson3@servermax1507/ay0lq11hqw
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1kYXZpZHMscj0wNTM5NzgwNzExMjQ2</auth>
-ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
-    handler[0](out_data)
-TypeError: register() takes exactly 1 argument (2 given)
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: carlson@servermax1507/4c1mt2u9gu
-DEBUG:sleekxmpp.features.feature_session.session:Established Session
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1wZXRlcnNvbjQ0LHI9MDk1ODg1NjMyOTMwNg==</auth>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="38jrcpejie" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj0zKy9lUHhmR0ZKNSszWEpza1dvNVVoejAxajg9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="34da99b0-7e67-46ab-b142-43b0670ffbcd-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
 DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="8c050ba5-4dd1-42c6-a646-995418360cce-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="3024bfb1-70b9-4429-91e9-10ef9d3f7a68-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wNTM5NzgwNzExMjQ2ZTA1YjI0NDgtZjU5OS00MzAzLTg1NTgtNjI1NzI3NWUwMmMzLHM9TzF5dHlMMWZPMDh4N3A5ZGdaeTdGUUEzYzNqWW1aZkMsaT00MDk2</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
 DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a6179d0>>
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: fisher@servermax1507/r83a7l3qt
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d7293290>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wOTU4ODU2MzI5MzA2OWQ0NjM5ZDEtNWI2Yi00ODFhLWE1MGQtMDk1YWM4ZjgyOTdkLHM9dkNVRjh1eFFaRGpxeGpROGU1a3kyQXh0UXpSbDkrNEQsaT00MDk2</challenge>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="wilson3@servermax1507/ay0lq11hqw" type="result" id="8c050ba5-4dd1-42c6-a646-995418360cce-3" />
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="carlson@servermax1507/4c1mt2u9gu" type="result" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-3" />
-DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="a0a6041c-090e-45a0-b91e-5e86223fb50b-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-1"><query xmlns="jabber:iq:register" /></iq>
 ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1maXNoZXIscj0yNDExNzUyMTU4OTI=</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="89fsk4a6h4" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="fisher@servermax1507/r83a7l3qt" type="result" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-3" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
 DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDU1ODYxOTQ3MTM3NzE2MGM4YWQxLTJmODktNDIxZC1iMTc0LTVmZjIxMWM4MDcxOCxwPVVaK0hJQTdaaE0xODhxTjZHZmdhK0E0b0hUYz0=</response>
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="9de12e81-3873-490a-b7e1-65a4848bf826-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-DEBUG:sleekxmpp.features.feature_session.session:Established Session
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0yNDExNzUyMTU4OTJjMmE5ZmY2ZC1iZDJkLTQ2ZDAtOTQ3Ni05Y2Y4OTM5YTQxNGMscz14MEhoZ29xYXAzSHRkelBpQjlPVmNuV0JucnZzREZuSixpPTQwOTY=</challenge>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDUzOTc4MDcxMTI0NmUwNWIyNDQ4LWY1OTktNDMwMy04NTU4LTYyNTcyNzVlMDJjMyxwPXdVMWYrUnIyeFh0ZHo2TU03MmE4MXhUY1hZVT0=</response>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="8c050ba5-4dd1-42c6-a646-995418360cce-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="e069ab5b-0404-40da-b360-6ff7b4c2f90f-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a626f50>>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d7ba0e10>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj05aTk1N1dLUnVjalZFTTVhM0cyYXV4S01wcVk9</success>
-DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDk1ODg1NjMyOTMwNjlkNDYzOWQxLTViNmItNDgxYS1hNTBkLTA5NWFjOGY4Mjk3ZCxwPTNsU3pvUmhBS1ZzTnhmN1ZCUG0wdENDRFVOZz0=</response>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7f2b3a69c810>>
+ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/89fsk4a6h4" type="result" id="9de12e81-3873-490a-b7e1-65a4848bf826-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>brixton@servermax1507/89fsk4a6h4</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1LOXozYXlHZG8vQXhkOXJPRjlhdTliVVprQU09</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: brixton@servermax1507/89fsk4a6h4
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d732e650>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
 TypeError: register() takes exactly 1 argument (2 given)
-ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1jaGlMWHQzRGJiUVlOTzFqME1lVUQ3L2Nlckk9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="9de12e81-3873-490a-b7e1-65a4848bf826-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
 ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
 TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a6aeed0>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
 ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
     handler[0](out_data)
 TypeError: register() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="4l0sc0tyyo" xml:lang="en">
-ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a607450>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MjQxMTc1MjE1ODkyYzJhOWZmNmQtYmQyZC00NmQwLTk0NzYtOWNmODkzOWE0MTRjLHA9dVJFN1A0MWM1bUFFTWUwdGladlFiUkVDZnhjPQ==</response>
 DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="2z97ya9y61" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="brixton@servermax1507/89fsk4a6h4" type="result" id="9de12e81-3873-490a-b7e1-65a4848bf826-3" />
 DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1jWlRRTlRadE1jZGF4cnV2d0RXYU5taFFGdzg9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="9re0wqwup1" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1hZGFtczEscj01ODg3NDE3MzA4MTM=</auth>
 DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1hZGFtczEscj0xNDczNTM3Mjc5Njc=</auth>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
 DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="4d5de900-bd40-4c66-81c3-a8033612e21f-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/4l0sc0tyyo" type="result" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>davids@servermax1507/4l0sc0tyyo</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="6adu1us4ll" xml:lang="en">
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0xNDczNTM3Mjc5NjdhOTJiOWNmYi00YjAxLTQyMWQtYmY4ZS05MmM1MjFiYjMzYzgscz0xTW00V2dXK25GUCtMNWZQWjBTeXIraWF1ZFpUcnN0TixpPTQwOTY=</challenge>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/2z97ya9y61" type="result" id="4d5de900-bd40-4c66-81c3-a8033612e21f-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>peterson44@servermax1507/2z97ya9y61</jid></bind></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: peterson44@servermax1507/2z97ya9y61
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: davids@servermax1507/4l0sc0tyyo
-DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="4d5de900-bd40-4c66-81c3-a8033612e21f-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="ad7ba067-a558-4c27-983a-275a202d2bd9-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="davids@servermax1507/4l0sc0tyyo" type="result" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-3" />
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="peterson44@servermax1507/2z97ya9y61" type="result" id="4d5de900-bd40-4c66-81c3-a8033612e21f-3" />
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/6adu1us4ll" type="result" id="ad7ba067-a558-4c27-983a-275a202d2bd9-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>fisher@servermax1507/6adu1us4ll</jid></bind></iq>
 DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
-DEBUG:sleekxmpp.features.feature_session.session:Established Session
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj01ODg3NDE3MzA4MTM1OWUyMmIzMC1mNjM2LTQ5NzQtYjllZi01MGU5MDBkZDUyYmQscz0xTW00V2dXK25GUCtMNWZQWjBTeXIraWF1ZFpUcnN0TixpPTQwOTY=</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="9de12e81-3873-490a-b7e1-65a4848bf826-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/9re0wqwup1" type="result" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>wilson3@servermax1507/9re0wqwup1</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
 DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="4d5de900-bd40-4c66-81c3-a8033612e21f-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="930a4bc3-3798-4d72-8385-41d0ae4212c4-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="a6b3cbe6-898b-44f4-ade2-0a4d1a80abaa-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: fisher@servermax1507/6adu1us4ll
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MTQ3MzUzNzI3OTY3YTkyYjljZmItNGIwMS00MjFkLWJmOGUtOTJjNTIxYmIzM2M4LHA9bVdGU1VwQ2EwSmFwUzYrc0RCTGN4ZUVsUDZ3PQ==</response>
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a5c1550>>
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: wilson3@servermax1507/9re0wqwup1
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d72a3810>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="ad7ba067-a558-4c27-983a-275a202d2bd9-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9NTg4NzQxNzMwODEzNTllMjJiMzAtZjYzNi00OTc0LWI5ZWYtNTBlOTAwZGQ1MmJkLHA9OS9PZHhpeUZRQVM1d2VodUU3a3VXUmNOdzJzPQ==</response>
 ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a669ed0>>
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
-    func(*args)
-TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="fisher@servermax1507/6adu1us4ll" type="result" id="ad7ba067-a558-4c27-983a-275a202d2bd9-3" />
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1VeDAvdklMVWRVeVFHaWhKZTlQSjg0TUlEY1k9</success>
-DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="wilson3@servermax1507/9re0wqwup1" type="result" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-3" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1rSXg3ZWZ1d0ptdWNtTStuelhySmYzVVNMTnc9</success>
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
-DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
 DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='servermax1507' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
 DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="38jrcpejie" xml:lang="en">
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="2yat6oap9k" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="53bfp27uor" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="13qldrv1kv" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="7huh0wm1nm" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="9o6cafqqje" xml:lang="en">
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d72bbd10>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/38jrcpejie" type="result" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>adams1@servermax1507/38jrcpejie</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="00e785af-793d-4de3-a5db-0da27a1e5194-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="33d1a956-7bdb-4bd2-94cd-de8ebcd3d8ff-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="00e785af-793d-4de3-a5db-0da27a1e5194-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: adams1@servermax1507/38jrcpejie
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d7251390>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d7276d10>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for AAAA records.
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d7232d90>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="adams1@servermax1507/38jrcpejie" type="result" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-3" />
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: No AAAA records for servermax1507
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d72d5290>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+DEBUG:sleekxmpp.xmlstream.resolver:DNS: Querying servermax1507 for A records.
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1kYXZpZHMscj01NzM3NzAwMzE1NDM=</auth>
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:Connecting to 192.168.1.248:5222
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1wZXRlcnNvbjQ0LHI9MDMxNTAxMTMyODE0MQ==</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1lY2tlcixyPTgzODM0Njg2OTkzNw==</auth>
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: connected
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+DEBUG:sleekxmpp.thirdparty.statemachine: ==== TRANSITION disconnected -> connected
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj01NzM3NzAwMzE1NDMwZjU0NjMwYi1hZTVmLTQyMjYtOGJhNC1mNDcxOTIwODBiNjcscz1PMXl0eUwxZk8wOHg3cDlkZ1p5N0ZRQTNjM2pZbVpmQyxpPTQwOTY=</challenge>
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:Starting HANDLER THREAD
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj04MzgzNDY4Njk5MzdmNWFlNzlmYi02MDVkLTQwMDAtYjQ2OC01OGE3MjZlMzM5Njgscz1pWkUyWnlUWjFSQXpiZHU3M01FQXdVYlBuelkraVVoOSxpPTQwOTY=</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0wMzE1MDExMzI4MTQxMTNiMmQ5YjQtYzI3MC00YTUzLWJmYzQtYTRiYzE5NzExODQ4LHM9dkNVRjh1eFFaRGpxeGpROGU1a3kyQXh0UXpSbDkrNEQsaT00MDk2</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1qb2huc29uMixyPTM1NjY1MzU2OTUwMw==</auth>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d732e650>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:Loading event runner
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="b40707a0-8f52-43d6-8f9f-33e04d46f73c-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj0zNTY2NTM1Njk1MDNlMDdmNzc0OC00ODIwLTQxZDUtOGRiYS0wODI0N2EyMmQ0YTgscz1YSTh4M1JMcmdVVXZVcmJJbVQzTW9tcm8zYmxURXNMOSxpPTQwOTY=</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="46cct45oou" xml:lang="en">
+DEBUG:sleekxmpp.plugins.xep_0077.register:Forced adding in-band registration stream feature
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><starttls xmlns="urn:ietf:params:xml:ns:xmpp-tls" /><mechanisms xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><mechanism>PLAIN</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>CRAM-MD5</mechanism><mechanism>DIGEST-MD5</mechanism></mechanisms><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><register xmlns="http://jabber.org/features/iq-register" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="get" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-1"><query xmlns="jabber:iq:register" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq type="result" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-1"><query xmlns="jabber:iq:register"><username /><password /><email /><name /><x xmlns="jabber:x:data" type="form"><title>XMPP Client Registration</title><instructions>Please provide the following information</instructions><field var="FORM_TYPE" type="hidden"><value>jabber:iq:register</value></field><field var="username" type="text-single" label="Username"><required /></field><field var="name" type="text-single" label="Full name" /><field var="email" type="text-single" label="Email" /><field var="password" type="text-private" label="Password"><required /></field></x></query></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: register
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.register of <clientlib.Client object at 0x7fa1d72e67d0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.stanza.rootstanza:Error handling {jabber:client}iq stanza
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+ERROR:sleekxmpp.basexmpp:register() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1182, in event
+    handler[0](out_data)
+TypeError: register() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Channel binding not supported.
+DEBUG:sleekxmpp.features.feature_mechanisms.mechanisms:Use Python 3.3+ for channel binding and SCRAM-SHA-1-PLUS support
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MDMxNTAxMTMyODE0MTEzYjJkOWI0LWMyNzAtNGE1My1iZmM0LWE0YmMxOTcxMTg0OCxwPVJyakdtMkZXRHNsSy93elVKTWJDaFlCQlVPUT0=</response>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="SCRAM-SHA-1">biwsbj1hZGFtczUscj01OTA4NzM3NDQ0NjU=</auth>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1IMG1KUHhwZ05qTEpnYWkwQ0RITnZlc3BYcWs9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <challenge xmlns="urn:ietf:params:xml:ns:xmpp-sasl">cj01OTA4NzM3NDQ0NjU3NGFmOGVkZC02M2RhLTQ0ZjAtYThhMC0zOWM1NzJhNDAyM2Iscz1VdFdjdmZDelJPYzJGRzVXSlJTbDJadEFuVUZvRjVpcixpPTQwOTY=</challenge>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="53bfp27uor" xml:lang="en">
 DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
 DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="ad7ba067-a558-4c27-983a-275a202d2bd9-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3d702f50>>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/53bfp27uor" type="result" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>peterson44@servermax1507/53bfp27uor</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9MzU2NjUzNTY5NTAzZTA3Zjc3NDgtNDgyMC00MWQ1LThkYmEtMDgyNDdhMjJkNGE4LHA9NS9FSDl6RDBUZDE0YzJ3OVhkYXFIbWlKSWRjPQ==</response>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9ODM4MzQ2ODY5OTM3ZjVhZTc5ZmItNjA1ZC00MDAwLWI0NjgtNThhNzI2ZTMzOTY4LHA9WDMzeHp0QlUyb3hTS0t2MU1nbG43MTN1NDZjPQ==</response>
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: peterson44@servermax1507/53bfp27uor
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj00OUF0S01vNzFPRVpZT1FpcjVVVnBodDR3MzA9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj00KzdIQS94Y01PMDhONHZyMHEyV09uWHozY0k9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9NTczNzcwMDMxNTQzMGY1NDYzMGItYWU1Zi00MjI2LThiYTQtZjQ3MTkyMDgwYjY3LHA9QzVGbXdJUFpNdVlmRDRUb0hjMVJ3cnU2WFk4PQ==</response>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="peterson44@servermax1507/53bfp27uor" type="result" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-3" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj1TUHVueXBkVC9FdDhjWXFCYkRRNE5QeHg2Rjg9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="7huh0wm1nm" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="9o6cafqqje" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="13qldrv1kv" xml:lang="en">
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="00e785af-793d-4de3-a5db-0da27a1e5194-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="da8b6d63-bdf0-477f-a45c-1063d8caf0db-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/7huh0wm1nm" type="result" id="00e785af-793d-4de3-a5db-0da27a1e5194-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>johnson2@servermax1507/7huh0wm1nm</jid></bind></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/9o6cafqqje" type="result" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>ecker@servermax1507/9o6cafqqje</jid></bind></iq>
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <response xmlns="urn:ietf:params:xml:ns:xmpp-sasl">Yz1iaXdzLHI9NTkwODczNzQ0NDY1NzRhZjhlZGQtNjNkYS00NGYwLWE4YTAtMzljNTcyYTQwMjNiLHA9UnpWUERFZ0pQZEUxZmwxY211ek14VGpydDBvPQ==</response>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d7276d10>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <success xmlns="urn:ietf:params:xml:ns:xmpp-sasl">dj13VDFudnMwRGZPYmNlQ2hhSWRqTGxDem42Tms9</success>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/13qldrv1kv" type="result" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>davids@servermax1507/13qldrv1kv</jid></bind></iq>
+ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: ecker@servermax1507/9o6cafqqje
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: auth_success
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <stream:stream to='localhost' xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en' version='1.0'>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="ecker@servermax1507/9o6cafqqje" type="result" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-3" />
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: davids@servermax1507/13qldrv1kv
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="davids@servermax1507/13qldrv1kv" type="result" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-3" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:stream version="1.0" from="servermax1507" id="46cct45oou" xml:lang="en">
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: johnson2@servermax1507/7huh0wm1nm
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <stream:features xmlns="http://etherx.jabber.org/streams"><compression xmlns="http://jabber.org/features/compress"><method>zlib</method></compression><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /><session xmlns="urn:ietf:params:xml:ns:xmpp-session"><optional /></session><sm xmlns="urn:xmpp:sm:2" /><sm xmlns="urn:xmpp:sm:3" /></stream:features>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="00e785af-793d-4de3-a5db-0da27a1e5194-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.features.feature_bind.bind:Requesting resource: 
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="johnson2@servermax1507/7huh0wm1nm" type="result" id="00e785af-793d-4de3-a5db-0da27a1e5194-3" />
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/46cct45oou" type="result" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>adams5@servermax1507/46cct45oou</jid></bind></iq>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d7232d90>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
@@ -730,16 +704,41 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="servermax1507/2yat6oap9k" type="result" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-2"><bind xmlns="urn:ietf:params:xml:ns:xmpp-bind"><jid>adams1@servermax1507/2yat6oap9k</jid></bind></iq>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d7251390>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.features.feature_session.session:Established Session
+ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
+DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
+DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="fdbe095d-c2ce-42cf-a9a6-2ab8bf6c300a-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d72d5290>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_bind
-INFO:sleekxmpp.features.feature_bind.bind:JID set to: adams1@servermax1507/2yat6oap9k
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="adams1@servermax1507/2yat6oap9k" type="result" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-3" />
+ERROR:sleekxmpp.basexmpp:start() takes exactly 1 argument (2 given)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
+    func(*args)
+TypeError: start() takes exactly 1 argument (2 given)
+INFO:sleekxmpp.features.feature_bind.bind:JID set to: adams5@servermax1507/46cct45oou
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND (IMMED): <iq type="set" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-3"><session xmlns="urn:ietf:params:xml:ns:xmpp-session" /></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:RECV: <iq to="adams5@servermax1507/46cct45oou" type="result" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-3" />
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="00e785af-793d-4de3-a5db-0da27a1e5194-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
 DEBUG:sleekxmpp.features.feature_session.session:Established Session
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: session_start
 DEBUG:sleekxmpp.clientxmpp:Finished processing stream features.
 DEBUG:sleekxmpp.xmlstream.xmlstream:Event triggered: stream_negotiated
-ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7f2b3a69c810>>
+ERROR:sleekxmpp.xmlstream.xmlstream:Error processing event handler: <bound method Client.start of <clientlib.Client object at 0x7fa1d72e67d0>>
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
@@ -749,7 +748,5 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/sleekxmpp/xmlstream/xmlstream.py", line 1654, in _threaded_event_wrapper
     func(*args)
 TypeError: start() takes exactly 1 argument (2 given)
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="fa72693d-1564-435d-bb95-51e7bfec7dc6-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <message to="adams1@servermax1507" xml:lang="en"><body>this is a test</body></message>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <message to="adams1@servermax1507" xml:lang="en"><body>also a test</body></message>
-DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <message to="adams1@servermax1507" xml:lang="en"><body>still a test</body></message>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="92d74eda-67b1-4a2b-8bcb-32be8ae6b81f-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>
+DEBUG:sleekxmpp.xmlstream.xmlstream:SEND: <iq type="error" id="52c8a67d-7ab9-486b-a64d-8c5fa85cb400-1"><error type="cancel"><undefined-condition xmlns="urn:ietf:params:xml:ns:xmpp-stanzas" /><text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">SleekXMPP got into trouble.</text></error></iq>

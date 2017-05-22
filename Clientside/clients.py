@@ -6,6 +6,7 @@ import getopt
 import Queue
 import threading
 import logging
+import Schema
 from datetime import datetime
 from clientlib import Client
 from clientlib import Message

@@ -39,6 +39,10 @@ class Client(xmpp.ClientXMPP):
         self.add_event_handler("session_start", self.start, threaded=True)
         self.add_event_handler("register", self.register, threaded=True)
         self.add_event_handler("message", self.getmessage, threaded=True)
+        dispatcher = {'send_messsage':self.sendmessage,'test':self.test}
+
+    def test(self,args):
+        print args
 
     def getmessage(self, message):
         print message
@@ -55,6 +59,9 @@ class Client(xmpp.ClientXMPP):
 
     def get_conn_status(self):
         return self.connection_status
+
+    def add_task(self,task):
+        self.scheduler.add()
 
     def add_message(self, tmp_message):
         """

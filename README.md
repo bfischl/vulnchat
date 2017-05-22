@@ -2,7 +2,9 @@
 
 v0.0.1
 
-Dependencies: [sleekxmpp](http://sleekxmpp.com/) (pip install sleekxmpp)
+Dependencies:
+* [sleekxmpp](http://sleekxmpp.com/) (pip install sleekxmpp)
+* [jsonschema](https://pypi.python.org/pypi/jsonschema) (pip install jsonschema)
 
 Written by: bfischl
 
@@ -65,6 +67,10 @@ TODO
 1. Switch to JSON
     * Users and actions should be JSON'ed
 1. Switch from "conversations" to "actions", implement more callbacks
+    * ACTION - Update presence
+    * ACTION - Send Message
+    * ACTION - Update location
+    * ACTION - Change status to "busy" or "available"
 1. Implement event handler
     * Main thread receives events in JSON format and calls actions based on them
         * For example, user X's phone is destroyed. User X's scheduled actions should all be destroyed
